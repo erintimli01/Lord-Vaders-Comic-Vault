@@ -1,5 +1,5 @@
 import React from "react";
-import Comic from ".Comic";
+import Comic from "./Comic";
 
 function ComicList() {
   return (
