@@ -1,10 +1,12 @@
 import React from "react";
 import Header from "./Header";
+import ComicList from "./ComicList";
 
 function App(){
   return (
     <React.Fragment>
-      <h1>Lord Vader's Comic Vault</h1>
+      <Header />
+      <ComicList />
 
       <hr/>
     </React.Fragment>
