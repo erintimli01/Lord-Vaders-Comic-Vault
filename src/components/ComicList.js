@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import Comic from "./Comic";
+import ComicDetails from "./ComicDetails";
 import Comic1 from "./../img/Comic1.jpg";
 import Comic2 from "./../img/Comic2.jpg";
 
@@ -22,6 +23,12 @@ const mainComicList = [
 
 
 function ComicList() {
+
+const [selectedComic, setSelectedComic] = useState(null);
+const handleClick = (comic) => {
+  setSelectedComic(comic);
+}
+
   return (
     <React.Fragment>
       {mainComicList.map((comic, index) =>
@@ -32,6 +39,16 @@ function ComicList() {
         price={comic.price}
         image={comic.image}
         key={index}
+        onclick={() => handleClick(comic)}
+        />
+      )}
+
+{selectedComic && (
+        <ComicDetails
+          title={selectedComic.title}
+          condition={selectedComic.condition}
+          date={selectedComic.date}
+          price={selectedComic.price}
         />
       )}
 
