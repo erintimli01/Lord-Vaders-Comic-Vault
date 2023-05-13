@@ -2,17 +2,15 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 
 function Comic(props) {
-  const [imageStyle, setImageStyle] = useState({
+  const imageStyle = {
     width: "200px",
-    height: "300px",
-  });
-
-  const handleClick = () => {
+    height: "300px", 
   };
+
 
   return (
     <React.Fragment>
-      <img src={props.image} alt="Comic" style={imageStyle} onClick={handleClick} />
+      <img src={props.image} alt="Comic" style={imageStyle}/>
       <h3>{props.title}</h3>
       <h4>Condition: {props.condition}</h4>
       <h4>Date: {props.date}</h4>

@@ -24,11 +24,6 @@ const mainComicList = [
 
 function ComicList() {
 
-const [selectedComic, setSelectedComic] = useState(null);
-const handleClick = (comic) => {
-  setSelectedComic(comic);
-}
-
   return (
     <React.Fragment>
       {mainComicList.map((comic, index) =>
@@ -42,16 +37,6 @@ const handleClick = (comic) => {
         onclick={() => handleClick(comic)}
         />
       )}
-
-{selectedComic && (
-        <ComicDetails
-          title={selectedComic.title}
-          condition={selectedComic.condition}
-          date={selectedComic.date}
-          price={selectedComic.price}
-        />
-      )}
-
     </React.Fragment>
   );
 }
