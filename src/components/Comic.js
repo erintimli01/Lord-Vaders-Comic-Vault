@@ -11,7 +11,8 @@ function Comic(props) {
 
   return (
     <React.Fragment>
-      <Link to="./ComicDetails">
+      <Link to={`/comic/${props.id}`}>
+      {/* <Link to="./ComicDetails"> */}
       <img src={props.image} alt="Comic" style={imageStyle}/>
       </Link>
       <h3>{props.title}</h3>
