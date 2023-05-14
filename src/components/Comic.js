@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 function Comic(props) {
   const imageStyle = {
@@ -10,7 +11,9 @@ function Comic(props) {
 
   return (
     <React.Fragment>
+      <Link to="./ComicDetails">
       <img src={props.image} alt="Comic" style={imageStyle}/>
+      </Link>
       <h3>{props.title}</h3>
       <h4>Condition: {props.condition}</h4>
       <h4>Date: {props.date}</h4>
