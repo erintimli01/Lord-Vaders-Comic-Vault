@@ -1,10 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { useParams } from "react-router-dom";
-
-import Comic1 from "./../img/Comic1.jpg";
-import Comic2 from "./../img/Comic2.jpg";
-
+import { useParams, useNavigate } from "react-router-dom";
 
   const imageStyle = {
     width: "200px",
@@ -14,10 +10,15 @@ import Comic2 from "./../img/Comic2.jpg";
 function ComicDetails({ comics }) {
   const { id } = useParams();
   const comic = comics.find((c) => c.id === parseInt(id));
+  const navigate = useNavigate();
 
   if (!comic) {
     return <div>Comic not found.</div>;
   }
+
+  const handleBack = () => {
+    navigate("/");
+  };
 
   return (
     <div>
@@ -26,6 +27,7 @@ function ComicDetails({ comics }) {
       <p><strong>Condition:</strong> {comic.condition}</p>
       <p><strong>Date:</strong> {comic.date}</p>
       <p><strong>Price: </strong>{comic.price}</p>
+      <button onClick={handleBack}>Back</button>
     </div>
   );
 }
