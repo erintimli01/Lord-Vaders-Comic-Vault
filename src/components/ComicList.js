@@ -8,6 +8,7 @@ import Comic2 from "./../img/Comic2.jpg";
 
 const mainComicList = [
   {
+    id: 1,
     title: "this is a comic",
     condition: "F-",
     date: "some date",
@@ -15,6 +16,7 @@ const mainComicList = [
     image: Comic1
   },
   {
+    id: 2,
     title: "this is a comic also",
     condition: "F",
     date: "some other date",
@@ -30,6 +32,7 @@ function ComicList() {
     <React.Fragment>
       {mainComicList.map((comic, index) =>
         <Comic 
+        id={comic.id}
         title={comic.title}
         condition={comic.condition}
         date={comic.date}
