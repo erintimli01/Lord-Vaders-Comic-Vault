@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Comic from "./Comic";
 import ComicDetails from "./ComicDetails";
+import { Link } from "react-router-dom";
+
 import Comic1 from "./../img/Comic1.jpg";
 import Comic2 from "./../img/Comic2.jpg";
 
@@ -34,7 +36,7 @@ function ComicList() {
         price={comic.price}
         image={comic.image}
         key={index}
-        onclick={() => handleClick(comic)}
+        // onclick={() => handleClick(comic)}
         />
       )}
     </React.Fragment>
