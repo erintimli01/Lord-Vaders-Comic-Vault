@@ -12,11 +12,11 @@ function ComicDetails(props) {
   );
 }
 
-// ComicDetails.propTypes = {
-//   title: PropTypes.string,
-//   condition: PropTypes.string,
-//   date: PropTypes.string,
-//   price: PropTypes.string,
-// };
+ComicDetails.propTypes = {
+  title: PropTypes.string,
+  condition: PropTypes.string,
+  date: PropTypes.string,
+  price: PropTypes.string,
+};
 
 export default ComicDetails;
