@@ -8,6 +8,7 @@ import ComicList from './ComicList';
 import ComicDetails from './ComicDetails';
 import Pops from './Pops';
 import ActionFigures from './ActionFigures';
+import MoviePosters from './MoviePosters';
 
 import Comic1 from './../img/Comic1.jpg';
 import Comic2 from './../img/Comic2.jpg';
@@ -74,6 +75,7 @@ const App = () => {
         <Route path="/comic/:id" element={<ComicDetails comics={mainComicList} />} />
         <Route path="/pops" element={<Pops />} />
         <Route path="/actionfigures" element={<ActionFigures />} />
+        <Route path="/movieposters" element={<MoviePosters />} />
       </Routes>
       <div className="App">
         <Header as="h2">See something you like? Message Lord Vader and send an offer!</Header>
