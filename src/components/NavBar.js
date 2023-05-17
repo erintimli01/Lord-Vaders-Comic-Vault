@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from 'react-bootstrap/Container';
-import "./navbar.css";
+// import "./navbar.css";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link, useLocation } from 'react-router-dom';
@@ -86,7 +86,7 @@ function BasicExample() {
 
     <h1>Lord Vader's Comic Vault</h1>
     <div className="link-area">
-      <Link to="/comics">Comics</Link>
+      <Link to="/">Comics</Link>
       <Link to="/pops">Pops</Link>
       <Link to="/action">Action Figures</Link>
     </div>
