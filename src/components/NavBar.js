@@ -88,7 +88,7 @@ function BasicExample() {
     <div className="link-area">
       <Link to="/">Comics</Link>
       <Link to="/pops">Pops</Link>
-      <Link to="/action">Action Figures</Link>
+      <Link to="/actionfigures">Action Figures</Link>
     </div>
 
     {/* <Navbar.Toggle aria-controls="basic-navbar-nav" />

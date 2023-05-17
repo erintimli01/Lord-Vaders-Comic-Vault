@@ -6,6 +6,8 @@ import Swal from 'sweetalert2';
 import NavBar from './NavBar';
 import ComicList from './ComicList';
 import ComicDetails from './ComicDetails';
+import Pops from './Pops';
+import ActionFigures from './ActionFigures';
 
 import Comic1 from './../img/Comic1.jpg';
 import Comic2 from './../img/Comic2.jpg';
@@ -70,6 +72,8 @@ const App = () => {
       <Routes>
         <Route path="/" element={<ComicList comics={mainComicList} />} />
         <Route path="/comic/:id" element={<ComicDetails comics={mainComicList} />} />
+        <Route path="/pops" element={<Pops />} />
+        <Route path="/actionfigures" element={<ActionFigures />} />
       </Routes>
       <div className="App">
         <Header as="h2">See something you like? Message Lord Vader and send an offer!</Header>
