@@ -1,30 +1,30 @@
-import React from "react";
-import Comic from "./Comic";
-import PropTypes from "prop-types";
+import React from 'react';
+import Comic from './Comic';
+import PropTypes from 'prop-types';
+import { Grid } from 'semantic-ui-react';
 
-function ComicList({ comics}) {
-
+function ComicList({ comics }) {
   if (!comics) {
     return null;
   }
 
-
   return (
-    <React.Fragment>
-      {comics.map((comic) =>
-        <Comic 
-        key={comic.id}
-        id={comic.id}
-        title={comic.title}
-        condition={comic.condition}
-        date={comic.date}
-        price={comic.price}
-        image={comic.image}
-        // key={index}
-        // onclick={() => handleClick(comic)}
-        />
-      )}
-    </React.Fragment>
+    <Grid columns={3}>
+      <Grid.Row>
+        {comics.map((comic) => (
+          <Grid.Column key={comic.id}>
+            <Comic
+              id={comic.id}
+              title={comic.title}
+              condition={comic.condition}
+              date={comic.date}
+              price={comic.price}
+              image={comic.image}
+            />
+          </Grid.Column>
+        ))}
+      </Grid.Row>
+    </Grid>
   );
 }
 
@@ -36,11 +36,9 @@ ComicList.propTypes = {
       condition: PropTypes.string,
       date: PropTypes.string,
       price: PropTypes.string,
-      image: PropTypes.string
-
+      image: PropTypes.string,
     })
-  )
-}
-
+  ),
+};
 
 export default ComicList;
