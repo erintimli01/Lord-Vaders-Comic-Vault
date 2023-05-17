@@ -13,7 +13,10 @@ function Comic(props) {
       <Link to={`/comic/${props.id}`}>
       <img src={props.image} alt="Comic" style={imageStyle}/>
       </Link>
+      <Link to={`/comic/${props.id}`}>
       <h3>{props.title}</h3>
+      </Link>
+      <h4>{props.description}</h4>
       <h4>Price: {props.price}</h4>
     </React.Fragment>
   );
@@ -22,6 +25,7 @@ function Comic(props) {
 Comic.propTypes = {
   image: PropTypes.string,
   title: PropTypes.string,
+  description: PropTypes.string,
   condition: PropTypes.string,
   date: PropTypes.string,
   price: PropTypes.string,

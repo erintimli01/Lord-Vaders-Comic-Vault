@@ -12,6 +12,14 @@ import MoviePosters from './MoviePosters';
 
 import Comic1 from './../img/Comic1.jpg';
 import Comic2 from './../img/Comic2.jpg';
+import Comic3 from './../img/Comic3.jpg';
+import Comic4 from './../img/Comic4.jpg';
+import Comic5 from './../img/Comic5.jpg';
+import Comic6 from './../img/Comic6.jpg';
+import Comic7 from './../img/Comic7.jpg';
+import Comic8 from './../img/Comic8.jpg';
+import Comic9 from './../img/Comic9.jpg';
+import Comic10 from './../img/Comic10.jpg';
 
 import './App.css';
 
@@ -51,19 +59,90 @@ const App = () => {
   const mainComicList = [
     {
       id: 1,
-      title: 'this is a comic',
-      condition: 'F-',
-      date: 'some date',
-      price: '$10',
+      title: 'Marvel Team-Up #95 Marvel 🔑',
+      description: '1st Appearance of Mockingbird',
+      condition: 'VF',
+      date: 'JUL 1, 1980',
+      price: '$35',
       image: Comic1
     },
     {
       id: 2,
-      title: 'this is a comic also',
-      condition: 'F',
-      date: 'some other date',
-      price: '$40',
+      title: 'Amazing Spider-Man #61 Marvel🔑',
+      description: '1st Cover Appearance of Gwen Stacy',
+      condition: 'VG+ color lift from cover',
+      date: 'JUN 1, 1968',
+      price: '$45',
       image: Comic2
+    },
+    {
+      id: 3,
+      title: 'Superman\'s Girl Friend, Lois Lane #122 DC🔑',
+      description: 'Bondage Cover',
+      condition: 'FN+',
+      date: 'MAR 23, 1972',
+      price: '$25',
+      image: Comic3
+    },
+    {
+      id: 4,
+      title: 'Supergirl #9 DC',
+      condition: 'FN+',
+      date: 'DEC 1, 1973',
+      price: '$8',
+      image: Comic4
+    },
+    {
+      id: 5,
+      title: 'Adventure Comics #381 DC 🔑',
+      description: '1st Supergirl Solo Story',
+      condition: 'FN+',
+      date: 'JUN 10, 1969',
+      price: '$25',
+      image: Comic5
+    },
+    {
+      id: 6,
+      title: 'Superman\'s Girl Friend, Lois Lane #123 DC',
+      condition: 'FN+',
+      date: 'JUN 1, 1972',
+      price: '$8',
+      image: Comic6
+    },
+    {
+      id: 7,
+      title: 'She-Hulk #1 Marvel',
+      condition: 'NM+',
+      date: 'JAN 19, 2022',
+      price: '$10',
+      image: Comic7
+    },
+    {
+      id: 8,
+      title: 'The Sensational She-Hulk #1 Marvel 🔑',
+      description: 'Second Ongoing She-Hulk Solo Series',
+      condition: 'VF',
+      date: 'MAY 1, 1989',
+      price: '$25',
+      image: Comic8
+    },
+    {
+      id: 9,
+      title: 'Avengers: Curse of the Man-Thing #1 Marvel | Carmen Carnero Cover (1:10) 🔑',
+      description: '1st Appearance of the Harrower',
+      condition: 'NM',
+      date: 'MAR 31, 2021',
+      price: '$10',
+      image: Comic9
+    },
+    {
+      id: 10,
+      title: 'The Savage She-Hulk #1 Marvel 🔑',
+      description: '1st Appearance of She-Hulk | Newsstand',
+      condition: 'FN-',
+      date: 'FEB 1, 1980',
+      price: '$90',
+      image: Comic10
     }
   ];
 

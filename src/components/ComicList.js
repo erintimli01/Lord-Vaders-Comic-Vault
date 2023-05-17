@@ -3,6 +3,18 @@ import Comic from './Comic';
 import PropTypes from 'prop-types';
 import { Grid } from 'semantic-ui-react';
 
+const comicStyle = {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  width: "80%",
+  margin: "0 auto",
+  padding: "20px",
+  border: "1px solid #ccc",
+  borderRadius: "5px",
+  boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
+};
+
 function ComicList({ comics }) {
   if (!comics) {
     return null;
@@ -13,14 +25,17 @@ function ComicList({ comics }) {
       <Grid.Row>
         {comics.map((comic) => (
           <Grid.Column key={comic.id}>
-            <Comic
-              id={comic.id}
-              title={comic.title}
-              condition={comic.condition}
-              date={comic.date}
-              price={comic.price}
-              image={comic.image}
-            />
+            <div style={comicStyle}>
+              <Comic
+                id={comic.id}
+                title={comic.title}
+                description={comic.description}
+                condition={comic.condition}
+                date={comic.date}
+                price={comic.price}
+                image={comic.image}
+              />
+            </div>
           </Grid.Column>
         ))}
       </Grid.Row>
@@ -33,6 +48,7 @@ ComicList.propTypes = {
     PropTypes.shape({
       id: PropTypes.number,
       title: PropTypes.string,
+      description: PropTypes.string,
       condition: PropTypes.string,
       date: PropTypes.string,
       price: PropTypes.string,
