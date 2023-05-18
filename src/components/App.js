@@ -24,6 +24,7 @@ import Comic10 from './../img/Comic10.jpg';
 
 import './App.css';
 
+
 const SERVICE_ID = "service_gp97s6d";
 const TEMPLATE_ID = "template_rxwn8c2";
 const USER_ID = "3Xa-goe1ySzDQrvxz";
@@ -149,89 +150,106 @@ const App = () => {
 
   return (
     <div className="AppStyle">
-    <>
-      <NavBar />
-      <Routes>
-        <Route path="/" element={<ComicList comics={mainComicList} />} />
-        <Route path="/comic/:id" element={<ComicDetails comics={mainComicList} />} />
-        <Route path="/pops" element={<Pops />} />
-        <Route path="/actionfigures" element={<ActionFigures />} />
-        <Route path="/movieposters" element={<MoviePosters />} />
-      </Routes>
-
-      <div className="App">
-        
-        <Grid columns={2} stackable>
+      <>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<ComicList comics={mainComicList} />} />
+          <Route path="/comic/:id" element={<ComicDetails comics={mainComicList} />} />
+          <Route path="/pops" element={<Pops />} />
+          <Route path="/actionfigures" element={<ActionFigures />} />
+          <Route path="/movieposters" element={<MoviePosters />} />
+        </Routes>
+  
+        <div className="App">
+          <Grid columns={1}>
           <Grid.Column>
-        <Form onSubmit={handleOnSubmit}>
-        <Header as="h2">See something you like? Message Lord Vader now!
-        </Header>
-          <Form.Field
-            id="form-input-control-email"
-            control={Input}
-            label="Email"
-            name="user_email"
-            placeholder="Email…"
-            required
-            icon="mail"
-            iconPosition="left"
-            value={formData.user_email}
-            onChange={(e) =>
-              setFormData({ ...formData, user_email: e.target.value })
-            }
-          />
-          <Form.Field
-            id="form-input-control-last-name"
-            control={Input}
-            label="Name"
-            name="user_name"
-            placeholder="Name…"
-            required
-            icon="user circle"
-            iconPosition="left"
-            value={formData.user_name}
-            onChange={(e) =>
-              setFormData({ ...formData, user_name: e.target.value })
-            }
-          />
-          <Form.Field
-            id="form-textarea-control-opinion"
-            control={TextArea}
-            label="Message"
-            name="user_message"
-            placeholder="Message…"
-            required
-            value={formData.user_message}
-            onChange={(e) =>
-              setFormData({ ...formData, user_message: e.target.value })
-            }
-          />
-          <Button type="submit" color="green">
-            Submit
-          </Button>
-        </Form>
-        </Grid.Column>
-        <Grid.Column>
-          <Card.Group>
-          <Card>
-                  <Card.Content>
-                    <Card.Header>Card 1</Card.Header>
-                    <Card.Description>Some hardcoded text for Card 1</Card.Description>
-                  </Card.Content>
-                </Card>
+              <Form onSubmit={handleOnSubmit}>
+                <Header as="h2">See something you like? Message Lord Vader now!</Header>
+                <Form.Field
+                  id="form-input-control-email"
+                  control={Input}
+                  label="Email"
+                  name="user_email"
+                  placeholder="Email…"
+                  required
+                  icon="mail"
+                  iconPosition="left"
+                  value={formData.user_email}
+                  onChange={(e) =>
+                    setFormData({ ...formData, user_email: e.target.value })
+                  }
+                />
+                <Form.Field
+                  id="form-input-control-last-name"
+                  control={Input}
+                  label="Name"
+                  name="user_name"
+                  placeholder="Name…"
+                  required
+                  icon="user circle"
+                  iconPosition="left"
+                  value={formData.user_name}
+                  onChange={(e) =>
+                    setFormData({ ...formData, user_name: e.target.value })
+                  }
+                />
+                <Form.Field
+                  id="form-textarea-control-opinion"
+                  control={TextArea}
+                  label="Message"
+                  name="user_message"
+                  placeholder="Message…"
+                  required
+                  value={formData.user_message}
+                  onChange={(e) =>
+                    setFormData({ ...formData, user_message: e.target.value })
+                  }
+                />
+                <Button type="submit" color="green">
+                  Submit
+                </Button>
+              </Form>
+            </Grid.Column>
+            <Grid.Column>
+              <div>
+                <Card.Group>
+                  <Card>
+                    <Card.Content>
+                      <Card.Header>Grades</Card.Header>
+                      <Card.Description>
+                        Please note:<br />
+                        Grades are determined by the best of our ability, grading scale is listed below
+                      </Card.Description>
+                      <Card.Description>
+                        Grading Scale:<br />
+                        G = 1.0-3.5<br />
+                        VG = 4.0-5.0<br />
+                        F = 5.5-7.5<br />
+                        VF = 8.0-9.0<br />
+                        NM = 9.2+
+                      </Card.Description>
+                    </Card.Content>
+                  </Card>
+                </Card.Group>
+              </div>
+            </Grid.Column>
+            <Grid.Column>
+              <div>
                 <Card>
                   <Card.Content>
-                    <Card.Header>Card 2</Card.Header>
-                    <Card.Description>Some hardcoded text for Card 2</Card.Description>
+                    <Card.Header>Shipping</Card.Header>
+                    <Card.Description>Please put PayPal information in the body of the message</Card.Description>
+                    <Card.Description>Up to 6 books = $9</Card.Description>
+                    <Card.Description>6+ and slabs = $15</Card.Description>
+                    <Card.Description>International shipping is possible under consideration</Card.Description>
                   </Card.Content>
                 </Card>
-          </Card.Group>
-          </Grid.Column>
+              </div>
+            </Grid.Column>
           </Grid>
-      </div>
-    </>
+        </div>
+      </>
     </div>
   );
-};
-
-export default App
+};  
+  export default App;
