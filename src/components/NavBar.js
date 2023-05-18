@@ -17,6 +17,7 @@ const StyledNavBar = styled.div`
   color: black;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
   font-family: 'Bangers', cursive;
+  font-size: 20px;
   opacity: 1;
 
 
@@ -24,12 +25,13 @@ const StyledNavBar = styled.div`
     text-align: center;
     color: black;
     font-family: 'Bangers', cursive;
-    text-shadow: 2px 2px 4px rgba
+    text-shadow: 2px 2px 4px rgba;
+    font-size: 60px
   }
 
   & h1 span {
     background-color: black; 
-    padding: 5px;
+    padding: 10px;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   }

@@ -22,12 +22,10 @@ import Comic8 from './../img/Comic8.jpg';
 import Comic9 from './../img/Comic9.jpg';
 import Comic10 from './../img/Comic10.jpg';
 
-import './App.css';
-
-
 const SERVICE_ID = "service_gp97s6d";
 const TEMPLATE_ID = "template_rxwn8c2";
 const USER_ID = "3Xa-goe1ySzDQrvxz";
+
 
 const App = () => {
   const [formData, setFormData] = useState({
@@ -161,7 +159,7 @@ const App = () => {
         </Routes>
   
         <div className="App">
-          <Grid columns={1}>
+          <Grid columns={1} style={{ background: "transparent" }}>
           <Grid.Column>
               <Form onSubmit={handleOnSubmit}>
                 <Header as="h2">See something you like? Message Lord Vader now!</Header>
@@ -211,7 +209,7 @@ const App = () => {
               </Form>
             </Grid.Column>
             <Grid.Column>
-              <div>
+              <div className="CardStyle">
                 <Card.Group>
                   <Card>
                     <Card.Content>
