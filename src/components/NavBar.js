@@ -15,20 +15,32 @@ const StyledNavBar = styled.div`
   background-repeat: no-repeat;
   background-position: center top 50%;
   color: black;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.9);
   font-family: 'Bangers', cursive;
   opacity: 1;
 
 
   & h1 {
     text-align: center;
-    color: white;
+    color: black;
     font-family: 'Bangers', cursive;
+    text-shadow: 2px 2px 4px rgba
+  }
+
+  & h1 span {
+    background-color: black; 
+    padding: 5px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   }
 
   a {
     color: black;
     margin: 1rem;
+    background-color: black; 
+    padding: 5px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   }
 
   a:hover {
@@ -81,7 +93,7 @@ function BasicExample() {
 
   return (
     <StyledNavBar>
-      <h1>Lord Vader's Comic Vault</h1>
+      <h1><span>Lord Vader's Comic Vault</span></h1>
       <div className="link-area">
         <Link to="/">Comics</Link>
         <Link to="/pops">Pops</Link>
