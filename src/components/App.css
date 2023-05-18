@@ -1,9 +1,17 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
 
 .App {
   text-align: center;
   max-width: 300px;
   margin: 20px auto;
+  background: white;
+  border-radius: 10px;
+}
+
+.AppStyle {
+  background-image: url('../img/Background2.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 Form {

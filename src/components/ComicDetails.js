@@ -7,12 +7,13 @@ const containerStyle = {
   flexDirection: "column",
   alignItems: "center",
   // width: "300px",
-  width: "80%",
+  width: "30%",
   margin: "0 auto",
   padding: "20px",
   border: "1px solid #ccc",
   borderRadius: "5px",
   boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
+  backgroundColor: "white",
 };
 
 const imageStyle = {

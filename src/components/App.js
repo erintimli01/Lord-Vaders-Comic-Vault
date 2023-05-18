@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import emailjs from 'emailjs-com';
-import { Form, Input, TextArea, Button, Header } from 'semantic-ui-react';
+import { Form, Input, TextArea, Button, Header, Card, Grid } from 'semantic-ui-react';
 import Swal from 'sweetalert2';
 import NavBar from './NavBar';
 import ComicList from './ComicList';
@@ -9,6 +9,7 @@ import ComicDetails from './ComicDetails';
 import Pops from './Pops';
 import ActionFigures from './ActionFigures';
 import MoviePosters from './MoviePosters';
+import './App.css';
 
 import Comic1 from './../img/Comic1.jpg';
 import Comic2 from './../img/Comic2.jpg';
@@ -147,8 +148,18 @@ const App = () => {
   ];
 
   return (
+    <div className="AppStyle">
     <>
+    <style>
+    {`
+          @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+          body {
+            font-family: 'Bangers', cursive;
+          }
+          `}
       <NavBar />
+      </style>
       <Routes>
         <Route path="/" element={<ComicList comics={mainComicList} />} />
         <Route path="/comic/:id" element={<ComicDetails comics={mainComicList} />} />
@@ -156,9 +167,14 @@ const App = () => {
         <Route path="/actionfigures" element={<ActionFigures />} />
         <Route path="/movieposters" element={<MoviePosters />} />
       </Routes>
+
       <div className="App">
-        <Header as="h2">See something you like? Message Lord Vader and send an offer!</Header>
+        
+        <Grid columns={2} stackable>
+          <Grid.Column>
         <Form onSubmit={handleOnSubmit}>
+        <Header as="h2">See something you like? Message Lord Vader now!
+        </Header>
           <Form.Field
             id="form-input-control-email"
             control={Input}
@@ -203,8 +219,27 @@ const App = () => {
             Submit
           </Button>
         </Form>
+        </Grid.Column>
+        <Grid.Column>
+          <Card.Group>
+          <Card>
+                  <Card.Content>
+                    <Card.Header>Card 1</Card.Header>
+                    <Card.Description>Some hardcoded text for Card 1</Card.Description>
+                  </Card.Content>
+                </Card>
+                <Card>
+                  <Card.Content>
+                    <Card.Header>Card 2</Card.Header>
+                    <Card.Description>Some hardcoded text for Card 2</Card.Description>
+                  </Card.Content>
+                </Card>
+          </Card.Group>
+          </Grid.Column>
+          </Grid>
       </div>
     </>
+    </div>
   );
 };
 

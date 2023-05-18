@@ -4,21 +4,26 @@ import React from 'react';
 // import Navbar from 'react-bootstrap/Navbar';
 import { Link, useLocation } from 'react-router-dom';
 import styled from 'styled-components';
-import header1 from "./../img/header1.jpg"
+import header2 from "./../img/header2.webp"
 
 const StyledNavBar = styled.div`
   text-align: left;
   padding: 30px;
   margin: 10px;
-  background-image: url(${header1});
+  background-image: url(${header2});
   background-size: 100%;
   background-repeat: no-repeat;
-  background-position: center top 10%;
+  background-position: center top 50%;
   color: black;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+  font-family: 'Bangers', cursive;
+  opacity: 1;
+
 
   & h1 {
     text-align: center;
+    color: white;
+    font-family: 'Bangers', cursive;
   }
 
   a {
