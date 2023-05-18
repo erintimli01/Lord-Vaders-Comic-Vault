@@ -14,9 +14,9 @@
 
 .AppStyle {
   font-family: 'Bangers', cursive;
-  background-image: url('../img/Background2.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-image: url('../img/Background4.jpg');
+  background-size: 70%;
+  /* background-repeat: no-repeat; */
 }
 
 Form {
