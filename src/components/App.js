@@ -150,16 +150,7 @@ const App = () => {
   return (
     <div className="AppStyle">
     <>
-    <style>
-    {`
-          @import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
-
-          body {
-            font-family: 'Bangers', cursive;
-          }
-          `}
       <NavBar />
-      </style>
       <Routes>
         <Route path="/" element={<ComicList comics={mainComicList} />} />
         <Route path="/comic/:id" element={<ComicDetails comics={mainComicList} />} />

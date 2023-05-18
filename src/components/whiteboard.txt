@@ -1,0 +1,6 @@
+fix font
+fix header---color/size
+fix cards at bottom
+pops/af/MoviePosters-make card
+maybe make comiclist cards take up less space
+host?
