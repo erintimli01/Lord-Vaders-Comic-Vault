@@ -4,7 +4,7 @@ import emailjs from 'emailjs-com';
 import { Form, Input, TextArea, Button, Header, Card, Grid } from 'semantic-ui-react';
 import Swal from 'sweetalert2';
 import NavBar from './NavBar';
-import ComicList from './ComicList';
+import ComicList from '../ComicList';
 import ComicDetails from './ComicDetails';
 import Pops from './Pops';
 import ActionFigures from './ActionFigures';

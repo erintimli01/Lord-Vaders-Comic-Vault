@@ -6,7 +6,6 @@ const containerStyle = {
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  // width: "300px",
   width: "30%",
   margin: "0 auto",
   padding: "20px",
