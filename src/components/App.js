@@ -161,6 +161,8 @@ const App = () => {
         <div className="App">
           <Grid columns={1} style={{ background: "transparent" }}>
           <Grid.Column>
+            <Card>
+              <Card.Content>
               <Form onSubmit={handleOnSubmit}>
                 <Header as="h2">See something you like? Message Lord Vader now!</Header>
                 <Form.Field
@@ -207,6 +209,8 @@ const App = () => {
                   Submit
                 </Button>
               </Form>
+              </Card.Content>
+              </Card>
             </Grid.Column>
             <Grid.Column>
               <div className="CardStyle">
