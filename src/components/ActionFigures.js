@@ -16,10 +16,10 @@ const containerStyle = {
   backgroundColor: "white",
 };
 
-const imageStyle = {
-  width: "200px",
-  height: "300px",
-};
+// const imageStyle = {
+//   width: "200px",
+//   height: "300px",
+// };
 
 const buttonStyle = {
   marginTop: "20px",
